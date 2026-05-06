@@ -5,7 +5,7 @@
 **Application name:** Aero — U-Robot Link  
 **Application package ID:** `com.Aero.engrpanda`  
 **Developer:** Engr. J R Cabataña, ECT  
-**Contact:** engrpanda@gmail.com (replace with your real contact email before publishing)  
+**Contact:** engrpandaece@gmail.com 
 **Repository:** https://github.com/engrpanda/Aero_U-Robot-Link
 
 ---
