@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/engrpanda/Aero_U-Robot-Link/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="120" alt="Aero Logo"/>
+<img src="https://github.com/engrpanda/Aero_U-Robot-Link/blob/main/APP%20SC/icon.png?raw=true" width="120" alt="Aero Logo"/>
 
 # Aero — U-Robot Link
 
@@ -18,7 +18,7 @@
 ---
 
 <!-- Replace with actual screenshot collage -->
-<img src="https://raw.githubusercontent.com/engrpanda/Aero_U-Robot-Link/main/screenshots/collage.png" width="800" alt="App Screenshots"/>
+<img src="https://github.com/engrpanda/Aero_U-Robot-Link/blob/main/APP%20SC/0.png?raw=true" width="800" alt="App Screenshots"/>
 
 </div>
 
