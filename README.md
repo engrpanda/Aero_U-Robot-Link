@@ -57,7 +57,7 @@
 9. [Tips & Tricks](#9-tips--tricks)
 10. [Troubleshooting](#10-troubleshooting)
 11. [FAQ](#11-faq)
-12. [🤖 AI Code Generation](#13--ai-code-generation--let-ai-write-your-device-code)
+12. [🤖 AI Code Generation](#12--ai-code-generation--let-ai-write-your-device-code)
 
 ---
 
