@@ -13,7 +13,7 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
 [![Made in PH](https://img.shields.io/badge/Made%20in-Philippines%20🇵🇭-0038A8?style=flat-square)]()
 
-[**GitHub Repository**](https://github.com/engrpanda/Aero_U-Robot-Link) • [Report a Bug](https://github.com/engrpanda/Aero_U-Robot-Link/issues) • [Request a Feature](https://github.com/engrpanda/Aero_U-Robot-Link/issues) • [Privacy Policy](PRIVACY_POLICY.md)
+[**GitHub Repository**](https://github.com/engrpanda/Aero_U-Robot-Link) • [Report a Bug](https://github.com/engrpanda/Aero_U-Robot-Link/issues) • [Request a Feature](https://github.com/engrpanda/Aero_U-Robot-Link/issues) • [Privacy Policy](https://raw.githubusercontent.com/engrpanda/Aero_U-Robot-Link/refs/heads/main/PRIVACY_POLICY.md)
 
 ---
 
@@ -57,8 +57,7 @@
 9. [Tips & Tricks](#9-tips--tricks)
 10. [Troubleshooting](#10-troubleshooting)
 11. [FAQ](#11-faq)
-12. [Developer Notes](#12-developer-notes)
-13. [🤖 AI Code Generation](#13--ai-code-generation--let-ai-write-your-device-code)
+12. [🤖 AI Code Generation](#13--ai-code-generation--let-ai-write-your-device-code)
 
 ---
 
@@ -1900,26 +1899,6 @@ A: Wire servo signal to a PWM pin (e.g. Pin 9 on Arduino), add `#include <Servo.
 
 ---
 
-## 12. Developer Notes
-
-### Architecture
-
-- **Language:** Kotlin (Android), Java for some legacy components
-- **Min SDK:** API 24 (Android 7.0)
-- **Architecture:** Single Activity (`DeviceControlActivity`) with mode panels
-- **Connection layer:** `DeviceConnection` interface implemented by `BluetoothClassicConnection`, `BleConnection`, `EspWifiConnection`, `LegoNxtConnection`, `LegoEv3Connection`
-- **LEGO subsystem:** `com.Aero.engrpanda.device.LegoBluetoothBase` is an abstract base that handles SPP socket plumbing, paired-device pickup, and auto-reconnect. Subclasses implement `interpretCommand()` to translate the app's ASCII command set into LEGO Direct Commands binary frames. Settings live in `LegoSettings`, persisted per device type so NXT and EV3 each remember their own port assignments.
-- **IoT subsystem:** `com.Aero.engrpanda.iot.*` — completely self-contained, does not affect other modes
-
-### LEGO Protocol Notes
-
-- **Wire format:** Both NXT and EV3 frames start with a 2-byte little-endian length prefix.
-- **Direct command type:** `0x80` (no reply expected) — used everywhere because reply latency would kill control feel at joystick tick rates.
-- **NXT motor frame:** `SETOUTPUTSTATE` (telegram `0x04`) — one frame per motor, 12-byte payload.
-- **EV3 motor frame:** `opOutput_Power` (`0xA4`) + `opOutput_Start` (`0xA6`) batched into a single direct command — both drive motors update in one frame for low-latency joystick control.
-- **Parameter encoding:** EV3 uses `LC1` prefix (`0x81`) for signed 8-bit constants and `LC2` (`0x82`) for signed 16-bit constants (used by tone freq + duration).
-- The full LEGO command vocabulary recognised by Aero is documented in `LegoNxtConnection.kt` and `LegoEv3Connection.kt`.
-
 ### Adding New Commands
 
 Your Arduino handles any command string — just add an `else if` branch:
@@ -1935,20 +1914,6 @@ Then in Aero, create a Custom Button with command `MYCOMMAND:42\n`.
 
 To add a new command on the **LEGO side**, edit the `interpretCommand` function in `LegoNxtConnection.kt` and/or `LegoEv3Connection.kt`. Add a `when` branch for your command prefix and emit the appropriate LEGO bytecode using the existing `writeBytes()` helper.
 
-### Building from Source
-
-```bash
-git clone https://github.com/engrpanda/Aero_U-Robot-Link
-cd Aero_U-Robot-Link
-# Open in Android Studio Arctic Fox or newer
-# Build > Make Project
-# Or: ./gradlew assembleDebug
-```
-
-**Dependencies** (in `app/build.gradle`):
-- `androidx.appcompat`, `material`, `constraintlayout`
-- `com.google.code.gson:gson:2.10.1`
-- `org.java-websocket:Java-WebSocket:1.5.6`
 
 ### Protocol Notes
 
@@ -1960,7 +1925,7 @@ cd Aero_U-Robot-Link
 
 ---
 
-## 13. 🤖 AI Code Generation — Let AI Write Your Device Code
+## 12. 🤖 AI Code Generation — Let AI Write Your Device Code
 
 Aero uses a plain-text protocol, which means any AI assistant (ChatGPT, Claude, Gemini, Copilot, etc.) can generate complete, working Arduino/ESP code for your specific project in seconds.
 
