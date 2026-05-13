@@ -13,7 +13,7 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
 [![Made in PH](https://img.shields.io/badge/Made%20in-Philippines%20🇵🇭-0038A8?style=flat-square)]()
 
-[**GitHub Repository**](https://github.com/engrpanda/Aero_U-Robot-Link) • [Report a Bug](https://github.com/engrpanda/Aero_U-Robot-Link/issues) • [Request a Feature](https://github.com/engrpanda/Aero_U-Robot-Link/issues) • [Privacy Policy](https://raw.githubusercontent.com/engrpanda/Aero_U-Robot-Link/refs/heads/main/PRIVACY_POLICY.md)
+[**GitHub Repository**](https://github.com/engrpanda/Aero_U-Robot-Link) • [Report a Bug](https://github.com/engrpanda/Aero_U-Robot-Link/issues) • [Request a Feature](https://github.com/engrpanda/Aero_U-Robot-Link/issues) • [Privacy Policy](https://raw.githubusercontent.com/engrpanda/Aero_U-Robot-Link/refs/heads/main/PRIVACY_POLICY.md) • [Google Play Store](https://play.google.com/store/apps/details?id=com.Aero.engrpanda)
 
 ---
 
